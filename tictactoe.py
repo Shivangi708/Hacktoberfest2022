@@ -1,133 +1,97 @@
-board = [' ' for x in range(10)]
+import random
+def hangman():
 
-def insertLetter(letter,pos):
-    board[pos] = letter
+    word = random.choice(["pugger" , "littlepugger" , "tiger" , "superman" , "thor" , "pokemon" , "avengers" , "savewater" , "earth" , "annable" ])
+    validLetters = 'abcdefghijklmnopqrstuvwxyz'
+    turns = 10
+    guessmade = ''
 
-def spaceIsFree(pos):
-    return board[pos] == ' '
+    while len(word) > 0:
+        main = ""
+        missed = 0
 
-def printBoard(board):
-    print('   |   |   ')
-    print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
-    print('   |   |   ')
-    print('------------')
-    print('   |   |   ')
-    print(' ' + board[4] + ' | ' + board[5] + ' | ' + board[6])
-    print('   |   |   ')
-    print('------------')
-    print('   |   |   ')
-    print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
-    print('   |   |   ')
-
-def isBoardFull(board):
-    if board.count(' ') > 1:
-        return False
-    else:
-        return True
-
-def IsWinner(b,l):
-    return ((b[1] == l and b[2] == l and b[3] == l) or
-    (b[4] == l and b[5] == l and b[6] == l) or
-    (b[7] == l and b[8] == l and b[9] == l) or
-    (b[1] == l and b[4] == l and b[7] == l) or
-    (b[2] == l and b[5] == l and b[8] == l) or
-    (b[3] == l and b[6] == l and b[9] == l) or
-    (b[1] == l and b[5] == l and b[9] == l) or
-    (b[3] == l and b[5] == l and b[7] == l))
-
-def playerMove():
-    run = True
-    while run:
-        move = input("please select a position to enter the X between 1 to 9")
-        try:
-            move = int(move)
-            if move > 0 and move < 10:
-                if spaceIsFree(move):
-                    run = False
-                    insertLetter('X' , move)
-                else:
-                    print('Sorry, this space is occupied')
+        for letter in word:
+            if letter in guessmade:
+                main = main + letter
             else:
-                print('please type a number between 1 and 9')
-
-        except:
-            print('Please type a number')
-
-def computerMove():
-    possibleMoves = [x for x , letter in enumerate(board) if letter == ' ' and x != 0  ]
-    move = 0
-
-    for let in ['O' , 'X']:
-        for i in possibleMoves:
-            boardcopy = board[:]
-            boardcopy[i] = let
-            if IsWinner(boardcopy, let):
-                move = i
-                return move
-
-    cornersOpen = []
-    for i in possibleMoves:
-        if i in [1 , 3 , 7 , 9]:
-            cornersOpen.append(i)
-
-    if len(cornersOpen) > 0:
-        move = selectRandom(cornersOpen)
-        return move
-
-    if 5 in possibleMoves:
-        move = 5
-        return move
-
-    edgesOpen = []
-    for i in possibleMoves:
-        if i in [2,4,6,8]:
-            edgesOpen.append(i)
-
-    if len(edgesOpen) > 0:
-        move = selectRandom(edgesOpen)
-        return move
-
-def selectRandom(li):
-    import random
-    ln = len(li)
-    r = random.randrange(0,ln)
-    return li[r]
-
-def main():
-    print("Welcome to the game!")
-    printBoard(board)
-
-    while not(isBoardFull(board)):
-        if not(IsWinner(board , 'O')):
-            playerMove()
-            printBoard(board)
-        else:
-            print("sorry you loose!")
+                main = main + "_" + " "
+        if main == word:
+            print(main)
+            print("You win!")
             break
 
-        if not(IsWinner(board , 'X')):
-            move = computerMove()
-            if move == 0:
-                print(" ")
-            else:
-                insertLetter('O' , move)
-                print('computer placed an o on position' , move , ':')
-                printBoard(board)
+        print("Guess the word:" , main)
+        guess = input().lower()
+
+        if guess in validLetters:
+            guessmade = guessmade + guess
         else:
-            print("you win!")
-            break
+            print("Enter a valid character")
+            guess = input().lower()
+
+        if guess not in word:
+            turns = turns - 1
+            if turns == 9:
+                print("9 turns left")
+                print("  --------  ")
+            if turns == 8:
+                print("8 turns left")
+                print("  --------  ")
+                print("     O      ")
+            if turns == 7:
+                print("7 turns left")
+                print("  --------  ")
+                print("     O      ")
+                print("     |      ")
+            if turns == 6:
+                print("6 turns left")
+                print("  --------  ")
+                print("     O      ")
+                print("     |      ")
+                print("    /       ")
+            if turns == 5:
+                print("5 turns left")
+                print("  --------  ")
+                print("     O      ")
+                print("     |      ")
+                print("    / \     ")
+            if turns == 4:
+                print("4 turns left")
+                print("  --------  ")
+                print("   \ O      ")
+                print("     |      ")
+                print("    / \     ")
+            if turns == 3:
+                print("3 turns left")
+                print("  --------  ")
+                print("   \ O /    ")
+                print("     |      ")
+                print("    / \     ")
+            if turns == 2:
+                print("2 turns left")
+                print("  --------  ")
+                print("   \ O /|   ")
+                print("     |      ")
+                print("    / \     ")
+            if turns == 1:
+                print("1 turns left")
+                print("Last breaths counting, Take care!")
+                print("  --------  ")
+                print("   \ O_|/   ")
+                print("     |      ")
+                print("    / \     ")
+            if turns == 0:
+                print("You loose")
+                print("You let a kind man die")
+                print("  --------  ")
+                print("     O_|    ")
+                print("    /|\      ")
+                print("    / \     ")
+                break
 
 
-
-
-    if isBoardFull(board):
-        print("Tie game")
-
-while True:
-    x = input("Do you want to play again? (y/n)")
-    if x.lower() == 'y':
-        board = [' ' for x in range(10)]
-        print('--------------------')
-        main()
-    else:
-        break
+name = input("Enter your name: ")
+print("Welcome" , name )
+print("-------------------")
+print("try to guess the word in less than 10 attempts")
+hangman()
