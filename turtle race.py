@@ -35,14 +35,10 @@ for movement in range(100):
     ram.forward(randint(1, 5))
     krishna.forward(randint(1, 5))
 if aman.position() > (swati.position() and ram.position()and krishna.position()):
-    print(("Aman won the race"))
+    print("Aman won the race")
 elif swati.position()>(aman.position() and ram.position() and krishna.position()):
     print("swati won the race")
 elif ram.position()> (aman.position() and swati.position() and krishna.position()):
     print("ram won the race")
 else:
     print("Krishna won the race")
-
-
-
-input(" ...")
