@@ -22,7 +22,7 @@ Some of the projects included in this repository are:
 <img src="assets/drag.png"> 
 
 ## 5) Pomodoro🏃‍♀️
-<img src="assets/pomodoro.png"> 
+<img src="assets/Pomodoro.png"> 
 
 ## 5) Game🎮
 <img src="assets/game.png"> 
