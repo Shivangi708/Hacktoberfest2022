@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+
+    <!-- CSS code for this project -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 50px 30px;
+            color: red;
+            font-size: 45px;
+        }
+
+        #container {
+            margin: 10px auto 0px auto;
+            width: 70%;
+            text-align: center;
+            background-color: rgb(101, 171, 245);
+            border-radius: 10px;
+            padding: 100px;
+            display: flex;
+            height: 400px;
+            justify-content: center;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.461), 0 10px 10px rgba(0, 0, 0, 0.41);
+        }
+
+        .input-div {
+            padding: 5px 10px;
+            margin: 12px;
+            font-size: 35px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .input-div h1 {
+            margin: 20px;
+            color: black;
+        }
+
+        label {
+            font-size: 35px;
+        }
+
+        input {
+            width: 210px;
+            height: 35px;
+            border-radius: 6px;
+            padding: 20px;
+            font-size: 20px;
+            border: 2px solid rgb(47, 85, 255);
+        }
+
+        @media (max-width:768px) {
+            #container {
+                flex-direction: column;
+                align-items: center;
+                width: 90%;
+            }
+
+            .input-div {
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HTML code for this project -->
+    <h1>Unit Converter</h1>
+    <div id="container">
+        <div class="input-div">
+            <label>Feet</label><br>
+            <input type="number" value="1" id="feet" class="input">
+        </div>
+        <div class="input-div">
+            <h1>=</h1>
+        </div>
+        <div class="input-div">
+            <label>inch</label><br>
+            <input type="number" value="12" id="inch" class="input">
+        </div>
+    </div>
+
+
+    <script>
+        // js code for this project
+
+        var feet = document.getElementById('feet');
+        var inch = document.getElementById('inch');
+
+        feet.addEventListener('input', function () {
+            let f = this.value;
+            let i = f * 12;
+            inch.value = i;
+        });
+        inch.addEventListener('input', function () {
+            let i = this.value;
+            let f = i / 12;
+            if (!Number.isInteger(f)) {
+                f = f.toFixed(2);
+            };
+            feet.value = f;
+        });
+
+    </script>
+</body>
+
+</html>
