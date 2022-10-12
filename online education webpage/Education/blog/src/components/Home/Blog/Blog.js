@@ -3,9 +3,9 @@ import './blog.css';
 import {FaUserAlt} from 'react-icons/fa';
 import {CgCalendarDates} from 'react-icons/cg';
 import {TiMessages} from 'react-icons/ti';
-import blog1 from './../Images/blog3.jpg';
-import blog2 from './../Images/blog2.jpg';
-import blog3 from './../Images/blog1.jpg';
+import blog1 from './../../Images/blog3.jpg';
+import blog2 from './../../Images/blog2.jpg';
+import blog3 from './../../Images/blog1.jpg';
 
 const Blog = () => {
   return (

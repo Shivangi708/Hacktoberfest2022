@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './navbar.css';
 import {AiOutlineBars} from 'react-icons/ai';
 import {ImCross} from 'react-icons/im';
-import Aboutus from '../Allabout/Aboutus';
+// import Aboutus from '../Allabout/Aboutus';
 const Navbar = () => {
      const [click,setClick]=useState(false);
      return (
@@ -11,9 +11,9 @@ const Navbar = () => {
 
             <ul className={click?'mobile-nav':'flexSB'} onClick={()=>setClick(false)}>
 
-                    <li><a href='#'>Home</a></li>
+                    <li><a href=''>Home</a></li>
                     <li><a href='#'>All Courses</a></li>
-                    <li><a href='../Allabout/Aboutus.js/#allabout'>About</a></li>
+                    <li><a href='#'>About</a></li>
                     <li><a href='#'>Team</a></li>
                     <li><a href='#'>Pricing</a></li>
                     <li><a href='#'>Journal</a></li>
@@ -27,6 +27,7 @@ const Navbar = () => {
                              {click?<ImCross/>:<AiOutlineBars/>}
 
                         </button>
+   
        </nav>
   </div>
   )

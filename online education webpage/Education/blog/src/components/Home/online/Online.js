@@ -3,7 +3,7 @@ import './online.css';
 import {AiFillStar} from 'react-icons/ai';
 import {FiRotateCw} from 'react-icons/fi';
 import {MdDeveloperMode} from 'react-icons/md';
-import me from './../Images/Me.jpeg';
+import me from './../../Images/Me.jpeg';
 const Online = () => {
   return (
     <div className='online'>

@@ -1,8 +1,8 @@
 import React from "react";
 import './Team.css';
-import client1 from './../Images/Me.jpeg';
-import client2 from './../Images/Me.jpeg';
-import client3 from './../Images/Me.jpeg';
+import client1 from './../../Images/Me.jpeg';
+import client2 from './../../Images/Me.jpeg';
+import client3 from './../../Images/Me.jpeg';
 // import imeg4 from '../../images/port4.png';
 // import Swiper core and required modules
 import { Pagination } from 'swiper';
