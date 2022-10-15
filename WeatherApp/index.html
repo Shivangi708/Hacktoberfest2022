@@ -1,21 +1,57 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="weather.css">
 </head>
-
 <body>
-
-    <form class="" action="index.html" method="post">
-        <label for="cityinput">City Name :</label>
-        <input id="cityinput" type="text" name="cityname">
-        <button type="submit">Go</button>
-    </form>
-
+    <div class="container pb-3">
+        <div class="row">
+            <div class="col">
+                <form>
+                   <h3 class="alert text-light text-center white-color">Weather</h3>
+                    <div class="mb-3">
+                        <select name="countrylist" id="countrylist" class="form-select">
+                            <option value="">select country</select></option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <select name="statelist" id="statelist" class="form-select" disabled>
+                            <option value="">Select State</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <select name="citylist" id="citylist" class="form-select" disabled>
+                            <option value="">Select City</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="d-flex justify-content-center align-items-center" id="weatherwidget">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            new delhi, IN
+                        </h5>
+                        <p> friday, march 05,2021</p>
+                        <div id="tempcard">
+                            <h5 class="card-subtitle mb2">24 °C</h5>
+                            <p class="card-text"> feels like: 24,09 </p>
+                            <p class="card-text">Max: 24.09 °C, Min: 23 °C </p>
+                        
+                         <img src="rain.jpg" class="card-img-bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
 </body>
-
 </html>
+
