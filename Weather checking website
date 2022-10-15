@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    *{
+  margin:0;
+  padding:0;
+  /*box-sizing: border-box;*/
+}
+
+body{
+background: linear-gradient(to bottom, #e4f5fc 0%,#9fd8ef 0%,#9fd8ef 2%,#9fd8ef 2%,#9fd8ef 2%,#9fd8ef 23%,#9fd8ef 23%,#2ab0ed 100%);
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:contain;
+height:130vh;
+  overflow: hidden;
+}
+#container{
+  text-align:center;
+
+
+  
+}
+
+
+#data-box{
+  
+  background-color:rgba(255,255,255,1);
+  border-radius:5px;
+  padding:10px 30px 40px;
+   min-height:380px;
+
+  position:relative;
+  top:-400px;
+  margin-top:90px;
+  -webkit-box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.75);
+  
+  transition:all 500ms ease-in-out;
+  
+}
+ h3{
+    font-size:2rem;
+  }
+
+#location{
+  font-size:20px;
+}
+#location>span{
+  color:#2B4162;
+}
+#icon{
+
+font-size:2.5em;
+  line-height:90%;
+    margin:0 auto;
+ transition:height 500ms ease-in-out;
+}
+
+#condition{
+  color:#DD7230;
+    margin:0 auto;
+  margin-bottom:15px;
+}
+#weather{
+   margin-left:-15px;
+}
+#temp{
+  font-size:3em;
+   
+}
+
+#temp>span{
+   color:#DD7230;
+}
+#data{
+
+
+  margin-top:15px;
+}
+
+.wi{
+  font-size:2em;
+}
+
+.title{
+  text-align:center;
+  margin:0 auto;
+  font-size:3em;
+  margin-bottom:40px;
+
+}
+#cloud{
+  position:relative;
+  bottom:-8px;
+  font-size:1.5em;
+}
+#btn{
+  padding-top:3px;
+  padding-bottom:3px;
+  border:0;
+  background-color:#DD7230;
+  color:white;
+  border-radius:0;
+  margin-bottom:15px;
+  
+}
+
+
+#city-input{
+
+  text-align:center;
+  width:150px;
+  background-color:rgba(0,0,0,0.02);
+  border:0;
+  margin:0 auto;
+ border-radius:0;
+
+
+}
+
+#input{
+  transition:all 300ms ease-in-out;
+  position:absolute;
+  bottom:10px;
+  left:0px;
+}
+
+
+hr{
+  border-bottom:1px solid rgba(0,0,0,0.1);
+}
+
+.error{
+  color:red;
+  
+}
+
+@media screen and (max-width: 425px) {
+  #data-box{
+    min-height:470px;
+  }
+}
+
+
+/*Animation Clouds 
+i got the tutorial from :
+http://thecodeplayer.com/walkthrough/pure-css3-animated-clouds-background
+*/
+.clouds{
+	padding: 100px 0;
+	background: #c9dbe9;
+	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+}
+
+.cloud {
+	width: 200px; height: 60px;
+	background: #fff;
+	
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	
+	position: relative; 
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: -15px; left: 10px;
+	
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+	width: 120px; height: 120px;
+	top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+	-webkit-animation: moveclouds 15s linear infinite;
+	-moz-animation: moveclouds 15s linear infinite;
+	-o-animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+	left: 200px;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	opacity: 0.6; /*opacity proportional to the size*/
+	
+	/*Speed will also be proportional to the size and opacity*/
+	/*More the speed. Less the time in 's' = seconds*/
+	-webkit-animation: moveclouds 25s linear infinite;
+	-moz-animation: moveclouds 25s linear infinite;
+	-o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+	left: -250px; top: -200px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+	left: 470px; top: -250px;
+	
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	opacity: 0.75; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 18s linear infinite;
+	-moz-animation: moveclouds 18s linear infinite;
+	-o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+	left: -150px; top: -150px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+  </style>
+
+  
+
+<div class="container-fluid clouds" id="container" >
+   
+	<div class="cloud x1"></div>
+	<!-- Time for multiple clouds to dance around -->
+	<div class="cloud x2"></div>
+	<div class="cloud x3"></div>
+	<div class="cloud x4"></div>
+	<div class="cloud x5"></div>
+
+   <div class="row">
+  <div id="data-box" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+   <h1 class="title"> Weather <span style="color:#DD7230;">App</span> <i id="cloud" class="wi wi-night-alt-cloudy-gusts"></i> </h1>
+   
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 " id="data">
+<p id="location"></p>
+<p id="temp"></p>
+</div>
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 " id="icon">
+    <p id="condition"></p>  
+    <p id="weather"></p></div>
+
+    <div id="input" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <p class="error"></p>
+      <input id="city-input" type="text" name="city" placeholder="i.e. Warsaw" size="10" class="form-control" title="Type your town here!"></input> <br>
+    <button id="btn" type="submit" class="btn btn-default"  onclick="searchByCityName();" title="Click to check the weather!">Check</button>
+  </div>
+</div>
+  </div>
+</div>
+
+<script>
+  
+var weather = document.getElementById("weather");
+var temp = document.getElementById("temp");
+ var loc = document.getElementById("location");
+var x = document.getElementById("data");
+
+(function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+  
+   
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+})();
+function showPosition(position) {
+    var lat= position.coords.latitude;
+    var lon= position.coords.longitude;
+
+  
+  var html ="https://api.apixu.com/v1/current.json?key=3c2276e8a69e4b12829231707162212&q="+lat+","+lon;
+  
+ 
+  $.getJSON(html,function(json){
+    
+    loc.innerHTML="<span>"+json.location.name +"</span>"+", "+json.location.country;
+    temp.innerHTML=json.current.temp_c + " <span>&degC</span>";
+  var weather_text=json.current.condition.text;
+  
+    
+    WeatherFinder(weather_text);
+    
+    if(weather_text.length>10)
+     weather.style.fontSize="25px";
+    
+    weather.innerHTML=weather_text;
+    
+
+  });
+
+  }
+
+
+
+
+function WeatherFinder(weath){
+  //sunny cloudy overcast rain snow sleet drizzle thunder blizzard fog mist ice
+  weath=weath.toLowerCase();
+  
+  var condition=document.getElementById('condition');
+     condition.className="";
+ if(weath.search("sun") >= 0){
+
+  condition.classList.add("wi",'wi-day-sunny');
+ }else if(weath.search("cloud")>=0){
+   condition.classList.add("wi",'wi-day-cloudy');
+   
+ }
+   else if(weath.search("overcast")>=0){
+
+   condition.classList.add("wi","wi-cloudy");
+   }
+    else if(weath.search("rain")>=0){
+
+   condition.classList.add("wi","wi-rain");
+ }
+  else if(weath.search("snow")>=0){
+
+   condition.classList.add("wi","wi-snow");
+ }
+  else if(weath.search("sleet")>=0){
+condition.classList.add("wi","wi-sleet");
+ }
+  else if(weath.search("drizzle")>=0){
+   condition.classList.add("wi","wi-sprinkle");
+ }
+  else if(weath.search("thunder")>=0){
+ condition.classList.add("wi","wi-lightning");
+ }
+   else if(weath.search("blizzard")>=0){
+  condition.classList.add("wi","wi-storm-showers");
+ }
+  else if(weath.search("clear")>=0){
+condition.classList.add("wi","wi-night-clear");
+ }
+  else if(weath.search("fog")>=0 || weath.search("mist")>=0){
+ condition.classList.add("wi","wi-fog");
+ }
+  else if(weath.search("ice")>=0){
+  condition.classList.add("wi","wi-snowflake-cold");
+ }
+}
+
+
+function searchByCityName(city){
+  $.when(
+    $('#data').fadeOut('slow'),
+    $('#icon').fadeOut('slow')
+   ).done(function(){
+     
+  city=document.getElementById('city-input').value;
+  var html ="https://api.apixu.com/v1/current.json?key=3c2276e8a69e4b12829231707162212&q="+city;
+     dataFill(html);
+    
+    }    
+ 
+          );
+}
+
+function dataFill(html){
+   $.getJSON(html,function(json){
+         
+     try{
+       $('.error').html("");
+        loc.innerHTML="<span>"+json.location.name +"</span>"+", "+json.location.country;
+    temp.innerHTML=json.current.temp_c + "<span> &degC</span>";
+  var weather_text=json.current.condition.text;
+
+   
+    WeatherFinder(weather_text);
+    
+    if(weather_text.length>10)
+     weather.style.fontSize="25px";
+    
+    weather.innerHTML=weather_text;
+    }catch(e){
+       if (e instanceof TypeError) {
+          $('.error').html("No matching location found.");
+    } else {
+      $('.error').html("Something went wrong.");
+       console.log(e); 
+    }
+    };
+     
+    
+    
+    $('#data').fadeIn('slow');
+    $('#icon').fadeIn('slow');
+  });
+
+}
+</script>
+</body>
+</html>
