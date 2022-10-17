@@ -1,47 +1,114 @@
-<html lang="en">
+
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Tribute Page| A.P.J Abdul Kalam</title>
-    <link rel="stylesheet" href="style.css">
+  <title></title>
+  <script type="text/javascript" src="sudoku.js"></script>
+  <script type="text/javascript" src="analytics.js"></script>
+  <style type="text/css">
+
+    body { font-family: Calibri, sans-serif; }
+    #container { text-align: center }
+    table { border-collapse: collapse; font-size: 2em; margin: 0 auto; }
+    colgroup, tbody { border: solid medium; }
+    td { border: solid thin; height: 1.4em; width: 1.4em; text-align: center; padding: 0; }
+    button { margin-top: 15px; font-size: 1.5em; }
+    
+    padd{padding-bottom: 100px;}
+    
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-        <section class="top_section">
-            
-        <div class="image">
-        <img src="./images/apj.jpg" alt="tribute"/></div>
-        <div>
-            <h1>A . P . J  Abdul  Kalam</h1>
-            
-            <h4>(1931-2015)</h4>
-        
-        </div>
-        </section>  
-        <section class="about">
-            <h2>Missile Man Of India</h2>
-            <p><b>Avul Pakir Jainulabdeen Abdul Kalam </b>(15 October 1931 – 27 July 2015) was an Indian aerospace scientist who served as the 11th President of India from 2002 to 2007. He was born and raised in Rameswaram, Tamil Nadu and studied physics and aerospace engineering. He spent the next four decades as a scientist and science administrator, mainly at the Defence Research and Development Organisation (DRDO) and Indian Space Research Organisation (ISRO) and was intimately involved in India's civilian space programme and military missile development efforts. He thus came to be known as the 'Missile Man of India' for his work on the development of ballistic missile and launch vehicle technology.He also played a pivotal organisational, technical, and political role in India's Pokhran-II nuclear tests in 1998, the first since the original nuclear test by India in 1974.</p>
-        </section>
-        <section class="biography">
-            <h2>Biographies</h2>
-            <ul>
-                <li>Eternal Quest: Life and Times of Dr Kalam by S Chandra Pentagon Publishers, 2002. </li>
-                    <li>President A P J Abdul Kalam by R K Pruthi; Anmol Publications, 2002.</li>
-                    <li>A P J Abdul Kalam: The Visionary of India by K Bhushan, G Katyal; A P H Pub Corp, 2002.</li>
-                    <li>A Little Dream (documentary film) by P. Dhanapal; Minveli Media Works Private Limited, 2008. </li>
-                    <li>The Kalam Effect: My Years with the President by P M Nair; Harper Collins, 2008.</li>
-                   <li> My Days With Mahatma Abdul Kalam by Fr A K George; Novel Corporation, 2009.</li>
-                    <li>A.P.J. Abdul Kalam: A Life by Arun Tiwari; Haper Collins, 2015.</li>
-                    <li>The People's President: Dr A P J Abdul Kalam by S M Khan; Bloomsbury Publishing, 2016.</li>
-            </ul>
-
-        </section> 
-        <footer>Read more on <a href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam">Wikipedia</a></footer>
-        
-        </div>
-    </div>
+  
     
+   <div id="container">
+
+    <h1 class = "padd">Sudoku Solver</h1>
+
+    <table id="sudoku-board">
+      
+      
+      <colgroup><col><col><col>
+      <colgroup><col><col><col>
+      <colgroup><col><col><col>
+      <tbody>
+       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
+       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>     
+       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
+      <tbody>
+       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
+       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>     
+       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
+      <tbody>
+       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
+       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>     
+       <tr> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td> <td contenteditable="true"></td>
+    </table>
+    <div>
+      <button id="solve-button">Solve!</button>
+    </div>
+    <div>
+      <button id="clear-button">Clear board</button>
+    </div>
+  </div>
 </body>
+
+<script type="text/javascript">
+  document.getElementById("sudoku-board").addEventListener("keyup", function(event) {
+    if(event.target && event.target.nodeName == "TD") {
+      var validNum = /[1-9]/;
+      var tdEl = event.target;
+      if (tdEl.innerText.length > 0 && validNum.test(tdEl.innerText[0])) {
+        tdEl.innerText = tdEl.innerText[0];
+      } else {
+        tdEl.innerText = "";
+      }
+    }
+  });
+
+  document.getElementById("solve-button").addEventListener("click", function(event) {
+    var boardString = boardToString();
+    var solution = SudokuSolver.solve(boardString);
+    if (solution) {
+      stringToBoard(solution);
+    } else {
+      alert("Invalid board!");
+    }
+  })
+
+  document.getElementById("clear-button").addEventListener("click", clearBoard);
+
+  function clearBoard() {
+    var tds = document.getElementsByTagName("td");
+    for (var i = 0; i < tds.length; i++) {
+      tds[i].innerText = "";
+    }
+  }
+
+  function boardToString() {
+    var string = "";
+    var validNum = /[1-9]/;
+    var tds = document.getElementsByTagName("td");
+    for (var i = 0; i < tds.length; i++) {
+      if (validNum.test(tds[i].innerText[0])) {
+        string += tds[i].innerText;
+      } else {
+        string += "-";
+      }
+    }
+    return string;
+  }
+
+  function stringToBoard(string) {
+    var currentCell;
+    var validNum = /[1-9]/;
+    var cells = string.split("");
+    var tds = document.getElementsByTagName("td");
+    for (var i = 0; i < tds.length; i++) {
+      currentCell = cells.shift();
+      if (validNum.test(currentCell)) {
+        tds[i].innerText = currentCell;
+      }
+    }
+  }
+</script>
 </html>
