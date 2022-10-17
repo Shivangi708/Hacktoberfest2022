@@ -73,7 +73,7 @@ h1 {
 }
 
 p {
-  color: #464a67;
+  color: #6371f2;
   margin: 0;
   padding: 0;
 }
@@ -102,11 +102,11 @@ p {
 }
 
 #start{
-  background: #639B1B;
+  background: #86e20e;
 }
 
 #stop{
-  background: #e52424;
+  background: #ff5454;
 }
 
 #reset{
