@@ -3,7 +3,7 @@ import './about.css';
 import {TbCertificate} from 'react-icons/tb';
 import {GiSpellBook} from 'react-icons/gi';
 import {FaPeopleArrows} from 'react-icons/fa';
-import image from './../Images/about.jpg';
+import image from './../../Images/about.jpg';
 
 const About = () => {
   return (

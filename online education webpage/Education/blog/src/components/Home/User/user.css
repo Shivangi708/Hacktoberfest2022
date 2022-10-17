@@ -16,7 +16,7 @@
                   }
                   .container_user{
                     width: 100%;
-                    background: url("./../Images/user.jpg");
+                    background: url("./../../Images/user.jpg");
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;

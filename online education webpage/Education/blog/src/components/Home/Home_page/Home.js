@@ -2,7 +2,7 @@ import React from 'react'
 import './Home.css';
 import {AiOutlineArrowRight} from 'react-icons/ai';
 import Header from "./../Header/Header";
-import Navbar from './../Navbar/Navbar';
+import Navbar from './../../Navbar/Navbar';
 const Home = () => {
   return (
   <section className='home'>

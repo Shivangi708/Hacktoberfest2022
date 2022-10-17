@@ -1,10 +1,8 @@
 import React from 'react'
-import Home from '../Home_page/Home'
-import Navbar from '../Navbar/Navbar'
 const Aboutus = () => {
   return (
     <div id='allabout'>
-   
+              <h2>hello from about</h2>
     </div>           
 
                     )
