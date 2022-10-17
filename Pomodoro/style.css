@@ -1,12 +1,14 @@
 html {
     background-color: #ad9595;
     height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins, sans-serif;
 }
 
 h1 {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: #a26202 0px 0px 10px;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -15,8 +17,9 @@ h1 {
     width: 700px;
     background-color: #F5E4C3;
     margin: 0 auto;
-    border: 5px solid #1b300b;
-
+    border: 2px solid #a26202;
+    border-radius: 15px;
+    padding: 15px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -24,11 +27,12 @@ h1 {
 
 /*timers*/
 .label {
+    color: #000000;
     align-self: center;
     justify-self: center;
-
+    margin: 0%;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 #work {
@@ -47,7 +51,7 @@ h1 {
     justify-self: center;
 
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 p {
@@ -73,12 +77,31 @@ p {
 .btn {
     align-self: center;
     justify-self: center;
+    font-family: poppins, sans-serif;
+    font-weight: 300;
+    background-color: #a26202;
+    border: 2px solid #a26202;
+    border-radius: 5px;
+    color: aliceblue;
 
     width: 100px;
-    height: 30px;
-
+    height: 40px;
     font-size: 20px;
+    cursor: pointer;
 }
+
+.btn:active {
+    background-color: aliceblue;
+    border: 2px solid #71706e;
+    color: #71706e;
+}
+/* hover button */
+.btn:hover {
+    background-color: aliceblue;
+    border: 2px solid aliceblue;
+    color: #a26202;
+}
+
 
 #start {
     grid-area: 3 / 2 / 3 / 2;
