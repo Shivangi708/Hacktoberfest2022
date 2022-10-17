@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.mobile-container {
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px #3333331a;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+header input {
+    border: none;
+    background-color: #eee;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+}
+
+header button {
+    background-color: transparent;
+    color: #aaa;
+    font-size: 2rem;
+    border: none;
+    margin-left: 10px;
+}
+
+.fav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(243, 225, 255);
+}
+
+.fav-meals {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+
+.fav-meals li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    width: 85px;
+}
+
+.fav-meals li img {
+    border: 2px solid #ffffff1a;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px #3333331a;
+    object-fit: cover;
+    height: 75px;
+    width: 80px; 
+}
+
+.fav-meals li span {
+    font-size: 0.9rem;
+}
+
+.meal {
+    margin: 1.5rem;
+    box-shadow: 0 0 10px 2px #3333331a;     
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.meal-header {
+    position: relative;
+}
+
+.meal-header .random {
+    position: absolute;
+    top: 1rem;
+    background-color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-top-right-radius: 3px;
+}
+
+.meal-header img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.meal-body h4 {
+    margin: 0;
+}
+
+.meal-body .fav-btn {
+    font-size: 1.2rem;
+    border: none;
+    background-color: transparent;
+    color: rgb(206, 199, 199);    
+}
+
+.meal-body .fav-btn.active {
+    color: rebeccapurple;   
+}
