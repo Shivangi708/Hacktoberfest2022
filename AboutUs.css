@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+}
+#AboutUs-section{
+background: url(https://cdn.pixabay.com/photo/2016/09/13/19/31/texture-1668079__340.jpg) no-repeat center center/cover;
+}
+#AboutUs-heading{
+    text-align: center;
+    justify-items: center;
+
+}
+#AboutUs-heading h1{
+    font-family: 'Tangerine', cursive;
+    font-size: 62px;
+}
+.about{
+    padding: 22px;
+
+}
+#AboutUs-section h1{
+    color: rgb(232, 30, 30);
+}
+#AboutUs-section h3{
+    color: rgb(226, 140, 10);
+    /* text-align: center; */
+    padding-left: 20px;
+}
+#AboutUs-section p{
+    padding-left: 22px;
+}
+.about{
+    border:3px solid navy;
+    padding: 13px;
+   border-radius: 12px;
+   margin: 5px 14px;
+   box-sizing: border-box;
+}
+.about h3{
+    padding-bottom: 8px;
+}
