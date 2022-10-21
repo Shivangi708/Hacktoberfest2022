@@ -10,7 +10,8 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(bg_pomodoro.png);
+  background-image: url(bg_pomodoro.jpg);
+  background-size:cover;
   margin: 0;
   font-family: 'Mulish', sans-serif;
 }
