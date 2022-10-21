@@ -10,7 +10,7 @@ This is repository where geek enthusiasts🧑‍💻 who are new to Open Source 
 
 Some of the projects included in this repository are:
 
-## 1) Banana🍌 Speak
+## 1) Banana🍌 Speak.
 
 <img src="assets/banana speak.png">
 
