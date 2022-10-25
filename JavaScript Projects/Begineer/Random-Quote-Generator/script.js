@@ -160,7 +160,24 @@ var quotes = [
 	{
 	quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
 	source: "Aristotle"
+	},
+	{
+		quote:"It's OK to have your eggs in one basket as long as you control what happens to that basket.",
+		source:"Elon Musk"
+	},
+	{
+		quote: "I think it is possible for ordinary people to choose to be extraordinary.",
+		source: "Robin james"
+	},
+	{
+		quote: "To know that we know what we know, and to know that we do not know what we do not know, that is true knowledge.",
+		source:"Copernicus"
+	},
+	{
+		quote:"If it's your job to eat a frog, it's best to do it first thing in the morning. And If it's your job to eat two frogs, it's best to eat the biggest one first",
+		source:"Mark Twain"
 	}
+
 ];
 //Function to randomly select a quote value and return a random quote object from the quotes array
 function getRandomQuote () {
