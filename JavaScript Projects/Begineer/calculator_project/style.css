@@ -75,6 +75,14 @@ body {
 #clear {
     background-color: lightgray;
 }
+button:nth-child(1):hover{
+    font-size:22px;
+    background-color: #ff0000;
+}
+button:nth-child(2):hover{
+    font-size:22px;
+    background-color: #c73b3b;
+}
 
 button:nth-child(4) {
     font-size: 22px;
