@@ -14,7 +14,7 @@ body {
     line-height: .5;
 }
 .quote {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 400;
     line-height: 1.1;
     text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
@@ -60,6 +60,12 @@ body {
     content: ", ";
     font-style: normal;
 }
+.source,
+.citation,
+.year{
+    text-decoration:underline;
+}
+
 #loadQuote {
     font-size: 1.5rem;
     ;
