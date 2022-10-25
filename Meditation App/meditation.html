@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="meditation.css" />
+    <title>Mediation Music</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle"></div>
+
+      <div class="player">
+        <div class="icons">
+          <div class="play fas fa-play"></div>
+          <div class="pause fas fa-pause"></div>
+          <div class="stop fas fa-stop"></div>
+          <div class="sound fas fa-volume-up"></div>
+          <input
+            type="range"
+            class="volumeRange"
+            min="0"
+            max="100"
+            value="100"
+            step="10"
+          />
+        </div>
+      </div>
+      <footer>
+        <button class="tooltip">
+          What's playing?
+          <span class="tooltext">
+            <a
+              href="https://incompetech.filmmusic.io/song/5726-deep-relaxation-preview"
+              >Deep Relaxation Preview by <br />
+              Kevin MacLeod</a
+            >
+            <br /><br />
+            <a href="http://creativecommons.org/licenses/by/4.0/">License</a>
+          </span>
+        </button>
+      </footer>
+    </div>
+
+    <script src="meditation.js"></script>
+  </body>
+</html>
