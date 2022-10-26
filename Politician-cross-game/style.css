@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+:root{
+    --text-light: #e9e9e9;
+    --text-dark: #363636;
+    --text-btn : #816df2;
+    --text-yellow: #dae26a;
+    --text-selected : #34D399;
+    --cell-size: 100px;
+
+    /* images */
+    --female-1 : url('./assets/f1.png');
+    --female-2: url('./assets/f2.png');
+    --male-1: url('./assets/m1.png');
+    --male-2: url('./assets/m2.png');
+}
+
+* > * {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: rgb(54, 54, 54);
+}
+
+/* starting window */
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.primary-btn{
+    border: none;
+    background: var(--text-btn);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: var(--text-light);
+    margin-top: 2em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.text-light{
+    color: var(--text-light);
+}
+
+.text-yellow{
+    color: var(--text-yellow);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.primary-btn:hover{
+    background: var(--text-yellow);
+    color: var(--text-dark);
+}
+
+.start-game .profile .img > img{
+    cursor: pointer;
+}
+
+.start-game .profile .img > img:hover{
+    background-color: var(--text-yellow);
+}
+
+.start-game.hide{
+    display: none;
+}
+
+
+/* Main Game Board */
+#board{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    background-color: var(--text-light);
+    row-gap: 3px;
+    column-gap: 3px;
+}
+
+.block{
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.block.x, .block.x2,
+.block.y, .block.y2{
+    cursor: not-allowed;
+}
+
+.board.x .block:not(.x):not(.y):hover{
+    background: var(--female-1) var(--text-yellow) no-repeat;
+    opacity: 0.4;
+}
+
+.board.x2 .block:not(.x2):not(.y2):hover{
+    background: var(--female-2) var(--text-yellow) no-repeat;
+    opacity: 0.4;
+}
+
+.board.y .block:not(.y):not(.x):hover{
+    background: var(--male-1) #816df2 no-repeat;
+    opacity: 0.4;
+}
+
+.board.y2 .block:not(.y2):not(.x2):hover{
+    background: var(--male-2) #816df2 no-repeat;
+    opacity: 0.4;
+}
+
+
+/* x is equal to female */
+/* y is equal to male */
+.block.x{
+    background: var(--female-1) var(--text-yellow) no-repeat;
+    background-size: cover;
+}
+
+.block.x2{
+    background: var(--female-2) var(--text-yellow) no-repeat;
+    background-size: cover;
+}
+
+
+.block.y{
+    background: var(--male-1) #816df2  no-repeat;
+    background-size: cover;
+}
+
+.block.y2{
+    background: var(--male-2) #816df2 no-repeat;
+    background-size: cover;
+}
+
+/* Draw and Winner Msg Window */
+.start-game, .draw-msg, .winner-msg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 0.938);
+}
+
+.draw-msg, .winner-msg{
+    display: none;
+}
+
+.draw-msg.show, .winner-msg.show{
+    display: flex;
+}
+
+.start-game .profile .img > img.selected{
+    background-color: var(--text-selected);
+    border: 2px solid var(--text-light);
+    border-radius: 20px;
+}
+
+.win{
+    background-color: var(--text-selected) !important;
+}
+
+
+
+
