@@ -21,13 +21,13 @@ def hangman():
             break
 
         print("Guess the word:" , main)
-        guess = input()
+        guess = input().lower()
 
         if guess in validLetters:
             guessmade = guessmade + guess
         else:
             print("Enter a valid character")
-            guess = input()
+            guess = input().lower()
 
         if guess not in word:
             turns = turns - 1
@@ -90,9 +90,8 @@ def hangman():
                 break
 
 
-name = input("Enter your name")
+name = input("Enter your name: ")
 print("Welcome" , name )
 print("-------------------")
 print("try to guess the word in less than 10 attempts")
 hangman()
-print()
